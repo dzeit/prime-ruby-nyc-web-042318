@@ -8,7 +8,7 @@ def prime?(number)
   if number % 2 == 0
     return false
   end
-  3..(number / 2).each do |n|
+  (3..(number / 2)).to_a.each do |n|
     if number % n == 0
       return false
     end
