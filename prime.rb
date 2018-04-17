@@ -1,18 +1,18 @@
 def prime?(number)
-  is_prime = true
   if number == 2
-    return is_prime
+    return true
   end
   if number <= 1
-    is_prime = false
+    return false
   end
   if number % 2 == 0
-    is_prime = false
+    return false
   end
   3..(number / 2).times do |n|
     if number % n == 0
-      is_prime = false
+      return false
     end
   end
-  is_prime
+
+  true
 end
