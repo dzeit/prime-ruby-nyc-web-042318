@@ -9,5 +9,10 @@ def prime?(number)
   if number % 2 == 0
     is_prime = false
   end
+  3..(number / 2).times do |n|
+    if number % n == 0
+      is_prime = false
+    end
+  end
   is_prime
 end
