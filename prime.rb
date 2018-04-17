@@ -1,11 +1,8 @@
 def prime?(number)
-  if number == 2
-    return true
-  end
   if number <= 1
     return false
   end
-  if number % 2 == 0
+  if number % 2 == 0 && number != 2
     return false
   end
   (3..(number / 2)).to_a.each do |n|
